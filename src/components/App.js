@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className="parent">
       <h1>Parent Component</h1>
-      <p>Show Modal: {showModal ? "True" : "False"}</p>
+      <p>This is the modal content.</p>
       <Child onShowModal={handleShowModal} />
     </div>
   );
