@@ -1,13 +1,20 @@
-
-import React from "react";
-import './../styles/App.css';
+import React, { useState } from "react";
+import Child from "./Child";
 
 const App = () => {
-  return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
-}
+  const [showModal, setShowModal] = useState(false);
 
-export default App
+  const handleShowModal = () => {
+    setShowModal(true); // Update state to true when called
+  };
+
+  return (
+    <div className="parent">
+      <h1>Parent Component</h1>
+      <p>Show Modal: {showModal ? "True" : "False"}</p>
+      <Child onShowModal={handleShowModal} />
+    </div>
+  );
+};
+
+export default App;
